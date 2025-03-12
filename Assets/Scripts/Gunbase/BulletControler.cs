@@ -60,6 +60,7 @@ public class BulletController : MonoBehaviour
         {
             gameObject.SetActive(false);
             bulletObjectPoolManager.ReturnBullet(gameObject);
+            Debug.Log("Bullet hit wall or enemy!");
         }
     }
 
