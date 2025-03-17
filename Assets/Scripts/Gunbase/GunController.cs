@@ -6,16 +6,17 @@ public class GunController : MonoBehaviour
     public GameObject gun;
     private EnemyDetection enemyDetection;
     private float rotationOffset = -90f; // Offset angle if the gun's default orientation isn't right
-    public GameObject BulletPrefab;
     public float BulletSpeed = 10f;
     public float FireRate = 1f;
 
+    public GameObject Spark;
+
     private void Fire(GameObject target)
     {
-        GameObject bullet = BulletObjectPoolManager.instance.GetBullet();
+        GameObject bullet = GetComponent<BulletObjectPoolManager>().GetBullet();
         if (bullet != null)
         {
-            // animator.SetBool("isShooting", true);
+            Spark.GetComponent<SparkAnimator>().OnShootingStart();
             bullet.GetComponent<BulletController>().Initialize(gun, target);
             bullet.SetActive(true);
         }
@@ -65,6 +66,8 @@ public class GunController : MonoBehaviour
 
         // Apply rotation to the gun
         gun.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        Spark.transform.rotation = Quaternion.Euler(0, 0, angle);
 
         // Debug the direction and angle
         Debug.DrawRay(gun.transform.position, direction.normalized * 5, Color.red);
