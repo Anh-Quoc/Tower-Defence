@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: 2028d0f3412acc94b90d80837a369c43
+guid: 407d054f7e9d1a549926832b0a0f4b72
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1174386100510253482
-    second: tier_1_0
+      213: -470211427550669973
+    second: investment-strategy.tft_set13_0
   - first:
-      213: -3279865912404993113
-    second: tier_1_1
+      213: 2966733622223691218
+    second: investment-strategy.tft_set13_1
   - first:
-      213: -296322668907969607
-    second: tier_1_2
+      213: 6771876065110427561
+    second: investment-strategy.tft_set13_2
   - first:
-      213: -4977522403349274264
-    second: tier_1_3
+      213: 6462495789670632164
+    second: investment-strategy.tft_set13_3
   - first:
-      213: -3370898856071413888
-    second: tier_1_4
+      213: 6266847203288075456
+    second: investment-strategy.tft_set13_4
   - first:
-      213: 5921379125551992460
-    second: tier_1_5
+      213: -9129579337119166408
+    second: investment-strategy.tft_set13_5
   - first:
-      213: -449734991010386726
-    second: tier_1_6
+      213: 6938232488738658365
+    second: investment-strategy.tft_set13_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tier_1_1
+      name: investment-strategy.tft_set13_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 0
-        width: 359
-        height: 512
+        x: 34
+        y: 22
+        width: 184
+        height: 196
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,8 +146,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ab103484539b72d0800000000000000
-      internalID: -3279865912404993113
+      spriteID: 2ddd9dfc284fb2920800000000000000
+      internalID: 2966733622223691218
       vertices: []
       indices: 
       edges: []
@@ -156,7 +156,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 094d8e5729ee5114d959af7464bf654c
+    spriteID: 9cc10cc36290a3e4faa95c958a9c6a50
     internalID: 0
     vertices: []
     indices: 
@@ -166,7 +166,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tier_1_1: -3279865912404993113
+      investment-strategy.tft_set13_1: 2966733622223691218
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
