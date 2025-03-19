@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      announce_icon_combat_0: 5881483995164823217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

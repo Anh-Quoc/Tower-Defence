@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      placebo_blur.tft_set12_0: -9085079171762513469
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
