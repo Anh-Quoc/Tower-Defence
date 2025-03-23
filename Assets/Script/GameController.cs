@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class GameController : MonoBehaviour
     private GameObject targetObject; // The GameObject you want to enable/disable
     [SerializeField]
     public GameObject playButton;
+    public string ChangeSceneName;
 
 
     void Start()
@@ -85,6 +87,13 @@ public class GameController : MonoBehaviour
         playButton.SetActive(!isActive);
 
     }
+
+    public void ChangeScene()
+    {
+        // Load the scene with the given name
+        SceneManager.LoadScene(ChangeSceneName);
+    }
+
 
 
 
