@@ -7,9 +7,11 @@ public class BulletController : MonoBehaviour
     private GameObject targetEnemy;
     private BulletObjectPoolManager bulletObjectPoolManager;
 
+    public int damage = 1;
+
     void Start()
     {
-        bulletObjectPoolManager = BulletObjectPoolManager.instance;
+        // bulletObjectPoolManager = BulletObjectPoolManager.instance;
     }
 
     void Update()
@@ -31,11 +33,6 @@ public class BulletController : MonoBehaviour
         }
     }
 
-    public void OnEnable()
-    {
-
-    }
-
     // Separate method to assign the enemy target
     public void Initialize(GameObject gunBase, GameObject targetEnemy)
     {
@@ -52,6 +49,10 @@ public class BulletController : MonoBehaviour
         {
             Debug.LogWarning("GunBase not found!");
         }
+    }
+
+    public void SetPool(BulletObjectPoolManager pool){
+        bulletObjectPoolManager = pool;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

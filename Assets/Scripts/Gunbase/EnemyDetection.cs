@@ -3,14 +3,20 @@ using UnityEngine;
 
 public class EnemyDetection : MonoBehaviour
 {
-    private List<GameObject> detectedEnemies = new List<GameObject>();
+    private List<GameObject> DetectedEnemies;
     public GameObject CurrentTarget { get; private set; }
+
+    void Start()
+    {
+        DetectedEnemies = new List<GameObject>();
+        CurrentTarget = null;
+    }
 
     private void UpdateTarget()
     {
-        if (detectedEnemies.Count > 0)
+        if (DetectedEnemies.Count > 0)
         {
-            CurrentTarget = detectedEnemies[0]; // Always target the first enemy in range
+            CurrentTarget = DetectedEnemies[0]; // Always target the first enemy in range
         }
         else
         {
@@ -22,10 +28,9 @@ public class EnemyDetection : MonoBehaviour
     {
         if (other != null && other.CompareTag("Enemy"))
         {
-            if (!detectedEnemies.Contains(other.gameObject))
+            if (!DetectedEnemies.Contains(other.gameObject))
             {
-                detectedEnemies.Add(other.gameObject);
-                Debug.Log($"Enemy {detectedEnemies.Count} Entered: {other.name}");
+                DetectedEnemies.Add(other.gameObject);
                 UpdateTarget();
             }
         }
@@ -35,10 +40,9 @@ public class EnemyDetection : MonoBehaviour
     {
         if (other != null && other.CompareTag("Enemy"))
         {
-            if (detectedEnemies.Contains(other.gameObject))
+            if (DetectedEnemies.Contains(other.gameObject))
             {
-                detectedEnemies.Remove(other.gameObject);
-                Debug.Log($"Enemy Exited: {other.name}");
+                DetectedEnemies.Remove(other.gameObject);
                 UpdateTarget(); // Automatically switch to the next enemy
             }
         }
