@@ -3350,8 +3350,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2128666523}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+      - m_Target: {fileID: 881644942}
+        m_TargetAssemblyTypeName: GameController1, Assembly-CSharp
         m_MethodName: OnOpenButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -3739,8 +3739,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2128666523}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+      - m_Target: {fileID: 881644942}
+        m_TargetAssemblyTypeName: GameController1, Assembly-CSharp
         m_MethodName: OnHideButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -4989,8 +4989,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2128666523}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+      - m_Target: {fileID: 881644942}
+        m_TargetAssemblyTypeName: GameController1, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
@@ -5393,6 +5393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 881644941}
+  - component: {fileID: 881644942}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -5415,6 +5416,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &881644942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881644940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12be8d72fe6fb234a8a45bcb793293f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseButtonImage: {fileID: 1024171726}
+  pauseSprite: {fileID: 21300068, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  playSprite: {fileID: 21300066, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  playButton: {fileID: 0}
+  ChangeSceneName: Start
+  openButton: {fileID: 347335898}
+  hideButton: {fileID: 494777395}
+  targetObject: {fileID: 1519693630}
 --- !u!1 &890878921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6315,9 +6336,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2128666525}
+      - m_Target: {fileID: 881644942}
         m_TargetAssemblyTypeName: GameController1, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: OnPauseButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
