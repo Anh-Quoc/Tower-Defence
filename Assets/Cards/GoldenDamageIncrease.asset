@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: GoldenDamageIncrease
   m_EditorClassIdentifier: 
   cardImage: {fileID: 5881483995164823217, guid: 0d306953268ed9d4d8c1e6811346f6b1, type: 3}
-  cardText: +25% Damage
+  cardText: x3.7 Damage
   cardBackGround: {fileID: -4639415637152648168, guid: dcbb908062ace3e4d9fc63b16a4b382b, type: 3}
   effectType: 1
-  effectValue: 25
+  effectValue: 3.7
   isUnique: 0
   unlockWave: 3

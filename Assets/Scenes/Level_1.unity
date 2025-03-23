@@ -8168,6 +8168,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1818045513}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1768706260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1768706261}
+  m_Layer: 0
+  m_Name: CardPos1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1768706261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768706260}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: -8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1844358449}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1802523659
 GameObject:
   m_ObjectHideFlags: 0
@@ -8375,6 +8406,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1818045513}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1844358448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1844358449}
+  m_Layer: 0
+  m_Name: CardSelectionUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1844358449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844358448}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1768706261}
+  - {fileID: 1852769646}
+  - {fileID: 1920996302}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1849776851 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9014818599596979486, guid: 69d7e4cbb9064459eb4e99358da548a5, type: 3}
@@ -8467,6 +8532,141 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8204828, y: 0.82048285}
   m_EdgeRadius: 0
+--- !u!1 &1852769645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1852769646}
+  m_Layer: 0
+  m_Name: CardPos2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1852769646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852769645}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1844358449}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1903421412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1903421415}
+  - component: {fileID: 1903421414}
+  - component: {fileID: 1903421413}
+  m_Layer: 0
+  m_Name: CardManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1903421413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903421412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f26a288eb44d7045b43b431ba62cc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMultiplier: 1
+  attackSpeedMultiplier: 1
+  healBonus: 0
+--- !u!114 &1903421414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903421412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56bc511585f7144aaf8bdb2154e95b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardPositionOne: {fileID: 1768706261}
+  cardPositionTwo: {fileID: 1852769646}
+  cardPositionThree: {fileID: 1920996302}
+  cardPrefab: {fileID: 1384058771189806410, guid: 956506562f247be40b20cf48af4ab5a8, type: 3}
+  cardSelectionUI: {fileID: 1844358448}
+  deck:
+  - {fileID: 11400000, guid: 28bb91feb28728349864fbcbff22230d, type: 2}
+  - {fileID: 11400000, guid: d431b838d2d34634591437cb61a1492b, type: 2}
+  - {fileID: 11400000, guid: 623efc85686ae4543aa1b696dfd5a0f4, type: 2}
+  - {fileID: 11400000, guid: 3025372f00c0f6a4ba59f7ab79e9a49c, type: 2}
+  - {fileID: 11400000, guid: 575f5e42a0b8caa4eb54e7a0313f0233, type: 2}
+  - {fileID: 11400000, guid: cba48b3e48e71274295a668136517655, type: 2}
+  - {fileID: 11400000, guid: a153bf2b5b55fa4448416263fceb0398, type: 2}
+--- !u!4 &1903421415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903421412}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1920996301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1920996302}
+  m_Layer: 0
+  m_Name: CardPos3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1920996302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920996301}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: -8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1844358449}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1953786243
 GameObject:
   m_ObjectHideFlags: 0
@@ -8761,6 +8961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128666522}
   - component: {fileID: 2128666523}
+  - component: {fileID: 2128666524}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -8801,6 +9002,18 @@ MonoBehaviour:
   targetObject: {fileID: 1519693630}
   playButton: {fileID: 0}
   ChangeSceneName: Start
+--- !u!114 &2128666524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128666521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8844e4c2a4add074792e116d211e3ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2144533391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8812,6 +9025,10 @@ PrefabInstance:
     - target: {fileID: 7014535395602281399, guid: 69d7e4cbb9064459eb4e99358da548a5, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424021401606574810, guid: 69d7e4cbb9064459eb4e99358da548a5, type: 3}
+      propertyPath: FireRate
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9014818599596979486, guid: 69d7e4cbb9064459eb4e99358da548a5, type: 3}
       propertyPath: m_Name
@@ -8885,3 +9102,5 @@ SceneRoots:
   - {fileID: 2144533391}
   - {fileID: 190706010}
   - {fileID: 881644941}
+  - {fileID: 1903421415}
+  - {fileID: 1844358449}

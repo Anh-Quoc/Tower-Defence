@@ -89,14 +89,18 @@ public class CardManager : MonoBehaviour
             alreadySelectedCards.Add(selectedCard);
         }
 
-        GameManager.Instance.ChangeState(GameManager.GameState.Playing);
+		UpgradeStats.Instance.ApplyCardEffect(selectedCard);
+
+		GameManager.Instance.ChangeState(GameManager.GameState.Playing);
     }
 
     public void ShowCardSelection() { 
-        cardSelectionUI.SetActive(true);
+        Time.timeScale = 0;
+		cardSelectionUI.SetActive(true);
     }
 
-    public void HideCardSelection() { 
-        cardSelectionUI.SetActive(false);
+    public void HideCardSelection() {
+		Time.timeScale = 1;
+		cardSelectionUI.SetActive(false);
     }
 }
