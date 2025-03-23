@@ -8,7 +8,7 @@ public class GunController : MonoBehaviour
     private float rotationOffset = -90f; // Offset angle if the gun's default orientation isn't right
     public GameObject BulletPrefab;
     public float BulletSpeed = 10f;
-    public float FireRate = 1f;
+    public float FireRate = 2f;
 
     private void Fire(GameObject target)
     {
@@ -45,10 +45,13 @@ public class GunController : MonoBehaviour
         if (enemyDetection != null && gun != null && enemyDetection.CurrentTarget != null)
         {
             AimAt(enemyDetection.CurrentTarget);
-            if (Time.time >= nextFireTime)
+
+            float buffedFireRate = FireRate / UpgradeStats.Instance.attackSpeedMultiplier;
+
+			if (Time.time >= nextFireTime)
             {
                 Fire(enemyDetection.CurrentTarget);
-                nextFireTime = Time.time + FireRate;
+                nextFireTime = Time.time + buffedFireRate;
             }
         }
     }
