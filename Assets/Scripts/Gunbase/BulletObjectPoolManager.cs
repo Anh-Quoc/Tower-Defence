@@ -1,10 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletObjectPoolManager : MonoBehaviour
 {
-    public static BulletObjectPoolManager instance;
+    // public static BulletObjectPoolManager instance;
 
     public GameObject bulletPrefab;
     public int bulletAmount = 20;
@@ -14,7 +13,7 @@ public class BulletObjectPoolManager : MonoBehaviour
 
     void Awake()
     {
-        instance = this;
+        // instance = this;
     }
 
     void Start()
@@ -23,6 +22,7 @@ public class BulletObjectPoolManager : MonoBehaviour
         for (int i = 0; i < bulletAmount; i++)
         {
             GameObject bullet = Instantiate(bulletPrefab);
+            bullet.GetComponent<BulletController>().SetPool(this);     
             bullet.SetActive(false);
             bulletPool.Enqueue(bullet);
         }
