@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5750679635ad63d47b8bfec7332514e4, type: 3}
   m_Name: AttackSpeedIncrease
   m_EditorClassIdentifier: 
-  cardImage: {fileID: -469442031222528029, guid: 8ec495404c46d7346a948f83eb809549, type: 3}
-  cardText: +10 Attack Speed
+  cardImage: {fileID: -8390565097620505633, guid: a70b1a6d72a046e48b7819ad9325609b, type: 3}
+  cardText: x1.4 Attack Speed
   cardBackGround: {fileID: 8179995683505010490, guid: f4a00a8a7da570e438331fc18f3e2bdd, type: 3}
   effectType: 2
-  effectValue: 10
+  effectValue: 1.4
   isUnique: 0
   unlockWave: 0

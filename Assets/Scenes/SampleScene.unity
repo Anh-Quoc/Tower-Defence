@@ -133,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4584899207663908221, guid: 28b22b41bfae6423a803c6d5ce5d1673, type: 3}
       propertyPath: speed
-      value: 1.5
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 5977672040716291557, guid: 28b22b41bfae6423a803c6d5ce5d1673, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3751,10 +3751,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6582465188418974779, guid: 69d7e4cbb9064459eb4e99358da548a5, type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 7764224477936991521, guid: 36f4dabbf67194186a772960cba607ac, type: 3}
+    - target: {fileID: 7338249446473118510, guid: 69d7e4cbb9064459eb4e99358da548a5, type: 3}
+      propertyPath: m_Color.a
+      value: 0.14117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424021401606574810, guid: 69d7e4cbb9064459eb4e99358da548a5, type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424021401606574810, guid: 69d7e4cbb9064459eb4e99358da548a5, type: 3}
+      propertyPath: BulletSpeed
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 9014818599596979486, guid: 69d7e4cbb9064459eb4e99358da548a5, type: 3}
       propertyPath: m_Name
       value: GunBase
@@ -4081,6 +4089,10 @@ PrefabInstance:
     - target: {fileID: 2940936809963083774, guid: 28b22b41bfae6423a803c6d5ce5d1673, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584899207663908221, guid: 28b22b41bfae6423a803c6d5ce5d1673, type: 3}
+      propertyPath: speed
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5977672040716291557, guid: 28b22b41bfae6423a803c6d5ce5d1673, type: 3}
       propertyPath: m_LocalPosition.x
