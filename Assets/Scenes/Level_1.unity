@@ -407,6 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlanePrefab: {fileID: 4594676153209260005, guid: c0f0f2166557cd54ca2f44d5f8000b87, type: 3}
+  yourButton: {fileID: 52204609}
 --- !u!1 &113517426
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,7 +3414,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2128666523}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: OpenAndCloseGunBar
+        m_MethodName: OnOpenButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3811,12 +3812,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 900359803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 481, y: 116.41315}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 80.181, y: -403}
+  m_SizeDelta: {x: 80.362, y: 34.546}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &494777397
 MonoBehaviour:
@@ -3864,7 +3865,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2128666523}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: OpenAndCloseGunBar
+        m_MethodName: OnHideButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5814,6 +5815,7 @@ RectTransform:
   - {fileID: 627311508}
   - {fileID: 448582667}
   - {fileID: 52204607}
+  - {fileID: 494777396}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5834,6 +5836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlanePrefab: {fileID: 0}
+  yourButton: {fileID: 0}
 --- !u!1 &903412732
 GameObject:
   m_ObjectHideFlags: 0
@@ -9041,14 +9044,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseButtonImage: {fileID: 1024171726}
-  openButtonImage: {fileID: 347335901}
   pauseSprite: {fileID: 21300068, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
-  openSprite: {fileID: 21300106, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   playSprite: {fileID: 21300066, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
-  closeGunBarSprite: {fileID: 21300108, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
-  targetObject: {fileID: 1519693630}
   playButton: {fileID: 0}
   ChangeSceneName: Start
+  openButton: {fileID: 347335898}
+  hideButton: {fileID: 494777395}
+  targetObject: {fileID: 1519693630}
 --- !u!114 &2128666524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9144,7 +9146,6 @@ SceneRoots:
   - {fileID: 791230873}
   - {fileID: 557427988}
   - {fileID: 2128666522}
-  - {fileID: 494777396}
   - {fileID: 1388544351}
   - {fileID: 2144533391}
   - {fileID: 190706010}
