@@ -15,8 +15,9 @@ public class GameController : MonoBehaviour
     Sprite playSprite;  // Sprite for the "Play" state
     [SerializeField]
     private GameObject targetObject; // The GameObject you want to enable/disable
+    [SerializeField]
+    public GameObject playButton;
 
-   
 
     void Start()
     {
@@ -74,9 +75,17 @@ public class GameController : MonoBehaviour
 
     public void UpdateCoin(int coin)
     {
-       
+        
     }
 
-   
-    
+    public void StartGame()
+    {
+
+        bool isActive = playButton.activeSelf;
+        playButton.SetActive(!isActive);
+
+    }
+
+
+
 }
