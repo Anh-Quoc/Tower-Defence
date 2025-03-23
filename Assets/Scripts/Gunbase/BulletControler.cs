@@ -7,6 +7,8 @@ public class BulletController : MonoBehaviour
     private GameObject targetEnemy;
     private BulletObjectPoolManager bulletObjectPoolManager;
 
+    public int damage = 1;
+
     void Start()
     {
         // bulletObjectPoolManager = BulletObjectPoolManager.instance;

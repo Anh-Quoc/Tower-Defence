@@ -31,7 +31,6 @@ public class EnemyDetection : MonoBehaviour
             if (!DetectedEnemies.Contains(other.gameObject))
             {
                 DetectedEnemies.Add(other.gameObject);
-                Debug.Log($"Enemy {DetectedEnemies.Count} Entered: {other.name}");
                 UpdateTarget();
             }
         }
@@ -44,7 +43,6 @@ public class EnemyDetection : MonoBehaviour
             if (DetectedEnemies.Contains(other.gameObject))
             {
                 DetectedEnemies.Remove(other.gameObject);
-                Debug.Log($"Enemy Exited: {other.name}");
                 UpdateTarget(); // Automatically switch to the next enemy
             }
         }

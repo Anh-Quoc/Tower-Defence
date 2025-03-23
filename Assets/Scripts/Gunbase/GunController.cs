@@ -11,6 +11,8 @@ public class GunController : MonoBehaviour
 
     public GameObject Spark;
 
+    public bool isActivated = true;
+
     private void Fire(GameObject target)
     {
         GameObject bullet = GetComponent<BulletObjectPoolManager>().GetBullet();
@@ -42,6 +44,10 @@ public class GunController : MonoBehaviour
 
     void Update()
     {
+        if(!isActivated)
+        {
+            return;
+        }
         // Only proceed if all components are valid
         if (enemyDetection != null && gun != null && enemyDetection.CurrentTarget != null)
         {
@@ -71,5 +77,15 @@ public class GunController : MonoBehaviour
 
         // Debug the direction and angle
         Debug.DrawRay(gun.transform.position, direction.normalized * 5, Color.red);
+    }
+
+    public void Activate()
+    {
+        isActivated = true;
+    }
+
+    public void Deactivate()
+    {
+        isActivated = false;
     }
 }
