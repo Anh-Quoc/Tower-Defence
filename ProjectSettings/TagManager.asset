@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Bullet
   - Wall
+  - DropArea
+  - Gunbase
   layers:
   - Default
   - TransparentFX
