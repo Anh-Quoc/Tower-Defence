@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5750679635ad63d47b8bfec7332514e4, type: 3}
+  m_Name: DiamondDamageIncrease
+  m_EditorClassIdentifier: 
+  cardImage: {fileID: -9085079171762513469, guid: 6bc36b0aec347a543b06bc1b00762029, type: 3}
+  cardText: x4 Damage
+  cardBackGround: {fileID: -3755851872276365507, guid: ee034cd63d248264c971be1f551832ad, type: 3}
+  effectType: 1
+  effectValue: 4
+  isUnique: 0
+  unlockWave: 5
