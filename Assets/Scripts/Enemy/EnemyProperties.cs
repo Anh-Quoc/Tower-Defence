@@ -21,6 +21,7 @@ public class EnemyProperties : MonoBehaviour
     public float CurrentHP => currentHP;
     public float Speed => speed;
     public float Damage => damage;
+    public bool isStopped { get; set; } = false;
 
     public List<GameObject> Waypoints { get; set; }
 
@@ -43,7 +44,7 @@ public class EnemyProperties : MonoBehaviour
 
     private void Update()
     {
-        if (!isDead) MoveTowardsWaypoint();
+        if (!isDead && !isStopped) MoveTowardsWaypoint();
     }
 
     public void TakeDamage(float damage)

@@ -8,10 +8,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private List<GameObject> enemyPrefabs;
     [SerializeField] private List<WaveProperties> waveProperties;
     [SerializeField] private List<GameObject> waypoints;
-
     private Dictionary<GameObject, Queue<GameObject>> enemyPool = new Dictionary<GameObject, Queue<GameObject>>();
     private List<GameObject> activeObjects = new List<GameObject>();
-
     private WaveProperties currentWave;
     private float spawnWaveDelay;
     private Coroutine spawnRoutine;
@@ -112,4 +110,43 @@ public class EnemyMovement : MonoBehaviour
         }
         if (activeObjects.Count == 0) currentWave = null;
     }
+
+    public void StopMovementForSeconds(float seconds)
+    {
+        StartCoroutine(StopMovementCoroutine(seconds));
+    }
+
+    private IEnumerator StopMovementCoroutine(float seconds)
+    {
+        foreach (GameObject enemy in activeObjects)
+        {
+            EnemyProperties enemyProps = enemy.GetComponent<EnemyProperties>();
+            if (enemyProps != null)
+            {
+                enemyProps.isStopped = true;
+            }
+        }
+        yield return new WaitForSeconds(seconds); 
+        foreach (GameObject enemy in activeObjects)
+        {
+            EnemyProperties enemyProps = enemy.GetComponent<EnemyProperties>();
+            if (enemyProps != null)
+            {
+                enemyProps.isStopped = false;
+            }
+        }
+    }
+
+    // public void SlowDownForSeconds(float slowSpeed, float duration)
+    // {
+    //     StartCoroutine(SlowDownCoroutine(slowSpeed, duration));
+    // }
+
+    // private IEnumerator SlowDownCoroutine(float slowSpeed, float duration)
+    // {
+    //     float originalSpeed = speed; 
+    //     speed = slowSpeed; 
+    //     yield return new WaitForSeconds(duration); 
+    //     speed = originalSpeed; 
+    // }
 }

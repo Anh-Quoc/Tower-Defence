@@ -4,12 +4,15 @@ public class BulletController : MonoBehaviour
 {
     [SerializeField]
     private float speed = 10f;
-    private GameObject targetEnemy;
+	[SerializeField]
+	private float baseDamage = 70f;
+
+	private GameObject targetEnemy;
     private BulletObjectPoolManager bulletObjectPoolManager;
 
     void Start()
     {
-        bulletObjectPoolManager = BulletObjectPoolManager.instance;
+        // bulletObjectPoolManager = BulletObjectPoolManager.instance;
     }
 
     void Update()
@@ -31,11 +34,6 @@ public class BulletController : MonoBehaviour
         }
     }
 
-    public void OnEnable()
-    {
-
-    }
-
     // Separate method to assign the enemy target
     public void Initialize(GameObject gunBase, GameObject targetEnemy)
     {
@@ -54,14 +52,23 @@ public class BulletController : MonoBehaviour
         }
     }
 
+    public void SetPool(BulletObjectPoolManager pool){
+        bulletObjectPoolManager = pool;
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Enemy"))
-        {
-            gameObject.SetActive(false);
-            bulletObjectPoolManager.ReturnBullet(gameObject);
-            Debug.Log("Bullet hit wall or enemy!");
-        }
+		if (collision.gameObject.CompareTag("Enemy"))
+		{
+			float finalDamage = baseDamage * UpgradeStats.Instance.damageMultiplier;
+			//collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(finalDamage);
+
+			Debug.Log($"Bullet dealt {finalDamage} damage!");
+
+			gameObject.SetActive(false);
+			bulletObjectPoolManager.ReturnBullet(gameObject);
+			Debug.Log("Bullet hit wall or enemy!");
+		}
     }
 
 }

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
@@ -8,15 +9,23 @@ public class GameController : MonoBehaviour
    
     
     [SerializeField]
-    Image pauseButtonImage; // Reference to the Image component of the button
+    Image pauseButtonImage;
     [SerializeField]
-    Sprite pauseSprite; // Sprite for the "Pause" state
+    Image openButtonImage;
     [SerializeField]
-    Sprite playSprite;  // Sprite for the "Play" state
+    Sprite pauseSprite;
     [SerializeField]
-    private GameObject targetObject; // The GameObject you want to enable/disable
+    Sprite openSprite;
+    [SerializeField]
+    Sprite playSprite;
+    [SerializeField]
+    Sprite closeGunBarSprite;
+    [SerializeField]
+    private GameObject targetObject; 
+    [SerializeField]
+    public GameObject playButton;
+    public string ChangeSceneName;
 
-   
 
     void Start()
     {
@@ -61,22 +70,47 @@ public class GameController : MonoBehaviour
         pauseButtonImage.sprite = pauseSprite; 
     }
 
-    
+
     public void OpenAndCloseGunBar()
     {
-        
-            bool isActive = targetObject.activeSelf; 
-            targetObject.SetActive(!isActive); 
-        
+        bool isActive = targetObject.activeSelf;
+        targetObject.SetActive(!isActive);
+
+        // Change the sprite based on the gun bar state
+        if (!isActive) // If gun bar is now active (opened)
+        {
+            // Update the sprite to the "close" gun bar sprite (if needed)
+            openButtonImage.sprite = closeGunBarSprite;
+        }
+        else 
+        {
+            
+            openButtonImage.sprite = openSprite;
+        }
     }
 
 
 
     public void UpdateCoin(int coin)
     {
-       
+        
     }
 
-   
-    
+    public void StartGame()
+    {
+
+        bool isActive = playButton.activeSelf;
+        playButton.SetActive(!isActive);
+
+    }
+
+    public void ChangeScene()
+    {
+        // Load the scene with the given name
+        SceneManager.LoadScene(ChangeSceneName);
+    }
+
+
+
+
 }

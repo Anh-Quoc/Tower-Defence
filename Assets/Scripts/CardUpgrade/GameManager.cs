@@ -94,7 +94,6 @@ public class GameManager : MonoBehaviour
     {
         Playing,
         CardSelection,
-
     }
 }
 
