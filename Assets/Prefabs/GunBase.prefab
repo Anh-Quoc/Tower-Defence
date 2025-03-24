@@ -318,7 +318,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: -8567168966410542837}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
           m_MethodName: HidePanelGunInfo
           m_Mode: 1
@@ -683,11 +683,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9221533235773173926}
-  - component: {fileID: -8567168966410542837}
   - component: {fileID: 7424021401606574810}
   - component: {fileID: 6582465188418974779}
   - component: {fileID: 1354435550686213507}
   - component: {fileID: 5071232132777264433}
+  - component: {fileID: -8174840817555678079}
   m_Layer: 0
   m_Name: GunBase
   m_TagString: Untagged
@@ -714,18 +714,6 @@ Transform:
   - {fileID: 6911125664195674776}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-8567168966410542837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9014818599596979486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b826cc137134473f9b7259a41a8dc9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7424021401606574810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -744,6 +732,7 @@ MonoBehaviour:
   FireRate: 2
   Spark: {fileID: 8125975139608988847}
   isActivated: 1
+  price: 100
 --- !u!114 &6582465188418974779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,7 +811,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: -8567168966410542837}
+        - m_Target: {fileID: -8174840817555678079}
           m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
           m_MethodName: DisplayPanelGunInfo
           m_Mode: 1
@@ -834,3 +823,15 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &-8174840817555678079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014818599596979486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b826cc137134473f9b7259a41a8dc9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

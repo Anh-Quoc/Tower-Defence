@@ -18,7 +18,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     [SerializeField] private Color validPlacementColor = new Color(0, 1, 0, 0.14f);
     [SerializeField] private Color invalidPlacementColor = new Color(1, 0, 0, 0.14f);
 
-    public TextMeshProUGUI MoneyText; // Use TextMeshPro for UI text
+    public Text MoneyText; // Use TextMeshPro for UI text
 
     public bool isActivated = false;
 
@@ -33,11 +33,11 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if(isActivated == false)
+        if (isActivated == false)
         {
             return;
         }
-        
+
         if (GunbasePrefab == null)
         {
             Debug.LogError("GunbasePrefab is not assigned!");
@@ -67,45 +67,45 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         UpdatePlacementIndicator(canPlace);
     }
 
-public void OnEndDrag(PointerEventData eventData)
-{
-    if (Gunbase == null) return;
-
-    if (canPlace)
+    public void OnEndDrag(PointerEventData eventData)
     {
-        Vector2 worldPos = GetWorldPosition();
-        Collider2D placeableArea = GetPlaceableArea(worldPos);
+        if (Gunbase == null) return;
 
-        if (placeableArea != null)
+        if (canPlace)
         {
-            Bounds bounds = placeableArea.bounds;
-            Vector2 clampedPosition = new Vector2(
-                Mathf.Clamp(worldPos.x, bounds.min.x, bounds.max.x),
-                Mathf.Clamp(worldPos.y, bounds.min.y, bounds.max.y)
-            );
+            Vector2 worldPos = GetWorldPosition();
+            Collider2D placeableArea = GetPlaceableArea(worldPos);
 
-            Gunbase.transform.position = clampedPosition;
-
-            if (Gunbase.TryGetComponent(out GunController controller))
+            if (placeableArea != null)
             {
-                controller.Activate();
+                Bounds bounds = placeableArea.bounds;
+                Vector2 clampedPosition = new Vector2(
+                    Mathf.Clamp(worldPos.x, bounds.min.x, bounds.max.x),
+                    Mathf.Clamp(worldPos.y, bounds.min.y, bounds.max.y)
+                );
+
+                Gunbase.transform.position = clampedPosition;
+
+                if (Gunbase.TryGetComponent(out GunController controller))
+                {
+                    controller.Activate();
+                }
+
+                // Destroy the DropArea after placement
+                placeableArea.gameObject.SetActive(false);
+                Gunbase.GetComponent<GunController>().detectionZone.GetComponent<SpriteRenderer>().enabled = false;
+
+                // Deduct the price from the money
+                GameManager.Instance.AddGold(-Gunbase.GetComponent<GunController>().price);
             }
-
-            // Destroy the DropArea after placement
-            placeableArea.gameObject.SetActive(false);
-            Gunbase.GetComponent<GunController>().detectionZone.GetComponent<SpriteRenderer>().enabled = false;
-
-            // Deduct the price from the money
-            MoneyText.text = (int.Parse(MoneyText.text) - Gunbase.GetComponent<GunController>().price).ToString();
         }
-    }
-    else
-    {
-        Destroy(Gunbase);
-    }
+        else
+        {
+            Destroy(Gunbase);
+        }
 
-    Gunbase = null;
-}
+        Gunbase = null;
+    }
 
 
     private Vector2 GetWorldPosition()

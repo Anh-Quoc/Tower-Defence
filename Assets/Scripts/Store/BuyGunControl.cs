@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class BuyGunControl : MonoBehaviour
 {
 
-    public TextMeshProUGUI MoneyText; // Use TextMeshPro for UI text
+    public Text MoneyText; // Use TextMeshPro for UI text
 
     public GameObject[] StoreItems;
 

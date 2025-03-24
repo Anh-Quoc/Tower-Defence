@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GunUIController : MonoBehaviour
 {
@@ -8,7 +9,9 @@ public class GunUIController : MonoBehaviour
 
     public GameObject panelGunInfo; // Assign in the Inspector
 
-    public TextMeshProUGUI MoneyText; // Use TextMeshPro for UI text
+    public Text MoneyText; // Use TextMeshPro for UI text
+
+    public GameObject DropAreaPrefab;
 
     public void DisplayPanelGunInfo(GameObject gun)
     {
@@ -33,12 +36,29 @@ public class GunUIController : MonoBehaviour
     {
         if (currentGun != null)
         {
-            // Sell the gun
+            // Ensure the GunController component exists before accessing it
+            GunController gunController = currentGun.GetComponent<GunController>();
+            if (gunController == null) return;
+
+            int gunPrice = gunController.price;
+
+            // Instantiate DropAreaPrefab at the currentGun's position
+            if (DropAreaPrefab != null)
+            {
+                Instantiate(DropAreaPrefab, currentGun.transform.position, Quaternion.identity);
+            }
+
+            // Remove the gun
             Destroy(currentGun);
             HidePanelGunInfo();
-            int gunPrice = currentGun.GetComponent<GunController>().price;
-            MoneyText.text = (int.Parse(MoneyText.text) + currentGun.GetComponent<GunController>().price / 2).ToString();
+
+            // Safely parse MoneyText and update the value
+            if (int.TryParse(MoneyText.text, out int currentMoney))
+            {
+                GameManager.Instance.AddGold(gunPrice / 2);
+            }
         }
     }
+
 
 }

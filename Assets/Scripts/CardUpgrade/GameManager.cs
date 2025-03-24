@@ -1,6 +1,7 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -45,7 +46,10 @@ public class GameManager : MonoBehaviour
 	}
 	public int GetGold => gold;
 	public bool IsGameOver => gameOver;
-	public void AddGold(int gold) => this.gold += gold;
+	public void AddGold(int gold) {
+		this.gold += gold;
+		if (this.gold < 0) this.gold = 0;
+	}
 	public float GetCurrentHealth => currentHealth;
 	public void TakeDamage(float damage)
 	{
@@ -55,6 +59,17 @@ public class GameManager : MonoBehaviour
 			return;
 		}
 		currentHealth -= damage;
+		healthBar.SetHealth(currentHealth);
+
+	}
+
+	public void HealthRecover(float health)
+	{
+		if (currentHealth >= maxHealth)
+		{
+			return;
+		}
+		currentHealth += health;
 		healthBar.SetHealth(currentHealth);
 
 	}
@@ -70,6 +85,8 @@ public class GameManager : MonoBehaviour
 		if (gameOver)
 		{
 			// TODO: Stop the game and show game over screen
+			SceneManager.LoadScene("Start");
+			
 			return;
 		}
 		if (currentState == GameState.Playing && IsSelect)
