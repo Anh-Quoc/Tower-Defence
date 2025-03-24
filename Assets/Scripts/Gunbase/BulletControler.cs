@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour
     private float speed = 10f;
 	[SerializeField]
 	private float baseDamage = 70f;
+    public float BaseDamage => baseDamage;
 
 	private GameObject targetEnemy;
     private BulletObjectPoolManager bulletObjectPoolManager;
@@ -60,11 +61,6 @@ public class BulletController : MonoBehaviour
     {
 		if (collision.gameObject.CompareTag("Enemy"))
 		{
-			float finalDamage = baseDamage * UpgradeStats.Instance.damageMultiplier;
-			//collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(finalDamage);
-
-			Debug.Log($"Bullet dealt {finalDamage} damage!");
-
 			gameObject.SetActive(false);
 			bulletObjectPoolManager.ReturnBullet(gameObject);
 			Debug.Log("Bullet hit wall or enemy!");

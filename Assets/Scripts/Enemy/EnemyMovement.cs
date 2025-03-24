@@ -91,7 +91,7 @@ public class EnemyMovement : MonoBehaviour
             enemyProps.SetEnemyManager(this);
             enemyProps.PrefabReference = enemyType;
             enemyProps.Respawn((float)GameManager.Instance.GetCurrentWave()/10);
-            activeObjects.Add(enemy);
+			activeObjects.Add(enemy);
         }
     }
 

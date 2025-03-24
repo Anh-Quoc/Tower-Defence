@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: AttackSpeedIncrease
   m_EditorClassIdentifier: 
   cardImage: {fileID: -8390565097620505633, guid: a70b1a6d72a046e48b7819ad9325609b, type: 3}
-  cardText: x1.4 Attack Speed
+  cardText: x1.1 Attack Speed
   cardBackGround: {fileID: 8179995683505010490, guid: f4a00a8a7da570e438331fc18f3e2bdd, type: 3}
   effectType: 2
-  effectValue: 1.4
+  effectValue: 1.1
   isUnique: 0
   unlockWave: 0
