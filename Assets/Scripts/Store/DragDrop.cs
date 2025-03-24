@@ -1,5 +1,7 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -16,6 +18,10 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     [SerializeField] private Color validPlacementColor = new Color(0, 1, 0, 0.14f);
     [SerializeField] private Color invalidPlacementColor = new Color(1, 0, 0, 0.14f);
 
+    public TextMeshProUGUI MoneyText; // Use TextMeshPro for UI text
+
+    public bool isActivated = false;
+
     private void Awake()
     {
         mainCamera = Camera.main;
@@ -27,6 +33,11 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if(isActivated == false)
+        {
+            return;
+        }
+        
         if (GunbasePrefab == null)
         {
             Debug.LogError("GunbasePrefab is not assigned!");
@@ -83,6 +94,9 @@ public void OnEndDrag(PointerEventData eventData)
             // Destroy the DropArea after placement
             placeableArea.gameObject.SetActive(false);
             Gunbase.GetComponent<GunController>().detectionZone.GetComponent<SpriteRenderer>().enabled = false;
+
+            // Deduct the price from the money
+            MoneyText.text = (int.Parse(MoneyText.text) - Gunbase.GetComponent<GunController>().price).ToString();
         }
     }
     else
