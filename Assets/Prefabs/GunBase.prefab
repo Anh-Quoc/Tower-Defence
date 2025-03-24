@@ -696,7 +696,7 @@ MonoBehaviour:
   detectionZone: {fileID: 3166399754978554001}
   gun: {fileID: 2067807965506050771}
   BulletSpeed: 100
-  FireRate: 0.8
+  FireRate: 2
   Spark: {fileID: 8125975139608988847}
   isActivated: 1
 --- !u!114 &6582465188418974779

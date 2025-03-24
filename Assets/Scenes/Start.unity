@@ -362,8 +362,11 @@ MonoBehaviour:
   pauseButtonImage: {fileID: 0}
   pauseSprite: {fileID: 0}
   playSprite: {fileID: 0}
-  targetObject: {fileID: 0}
   playButton: {fileID: 525545831}
+  ChangeSceneName: Level_1
+  openButton: {fileID: 0}
+  hideButton: {fileID: 0}
+  targetObject: {fileID: 0}
 --- !u!4 &455393317
 Transform:
   m_ObjectHideFlags: 0
@@ -1685,7 +1688,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1319654795}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 455393316}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1407521246
 GameObject:
   m_ObjectHideFlags: 0

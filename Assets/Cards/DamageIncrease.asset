@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: DamageIncrease
   m_EditorClassIdentifier: 
   cardImage: {fileID: 3431760603391478899, guid: 41ed6f3d03d395d4fa443f7aa4680b55, type: 3}
-  cardText: x2.5 Damage
+  cardText: x1.1 Damage
   cardBackGround: {fileID: 8179995683505010490, guid: f4a00a8a7da570e438331fc18f3e2bdd, type: 3}
   effectType: 1
-  effectValue: 2.5
+  effectValue: 1.1
   isUnique: 0
   unlockWave: 0

@@ -123,7 +123,7 @@ MonoBehaviour:
   - {fileID: 2940936809963083774, guid: 28b22b41bfae6423a803c6d5ce5d1673, type: 3}
   - {fileID: 3415795991165510053, guid: 91a39d971cecaac4d801e2f4c783c866, type: 3}
   - {fileID: 2187010734655306237, guid: 4238913f6155fe649af8a357f2be0add, type: 3}
-  - {fileID: 6526522283742336939, guid: 8f1d2aaef39e76f418c94e95135b15af, type: 3}
+  - {fileID: 6469512066455810480, guid: 8f1d2aaef39e76f418c94e95135b15af, type: 3}
   waveProperties:
   - enemies:
     - enemyType: {fileID: 2940936809963083774, guid: 28b22b41bfae6423a803c6d5ce5d1673, type: 3}
