@@ -15,5 +15,6 @@ public class HeathBar : MonoBehaviour
 	public void SetHealth(float health)
 	{
 		slider.value = health;
+		gameManager.HealthRecover(UpgradeStats.Instance.healBonus);
 	}
 }

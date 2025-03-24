@@ -13,6 +13,8 @@ public class GunController : MonoBehaviour
 
     public bool isActivated = true;
 
+    public int price = 100;
+
     private void Fire(GameObject target)
     {
         GameObject bullet = GetComponent<BulletObjectPoolManager>().GetBullet();
