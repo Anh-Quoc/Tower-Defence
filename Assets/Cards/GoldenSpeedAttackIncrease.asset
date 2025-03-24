@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5750679635ad63d47b8bfec7332514e4, type: 3}
+  m_Name: GoldenSpeedAttackIncrease
+  m_EditorClassIdentifier: 
+  cardImage: {fileID: 6509917970361544945, guid: 11c6fa87d77d99c4093142f32f630d2b, type: 3}
+  cardText: x1.3 Attack Speed
+  cardBackGround: {fileID: -4639415637152648168, guid: dcbb908062ace3e4d9fc63b16a4b382b, type: 3}
+  effectType: 2
+  effectValue: 1.3
+  isUnique: 0
+  unlockWave: 5
