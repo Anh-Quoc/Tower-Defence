@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: DiamondDamageIncrease
   m_EditorClassIdentifier: 
   cardImage: {fileID: -9085079171762513469, guid: 6bc36b0aec347a543b06bc1b00762029, type: 3}
-  cardText: x4 Damage
+  cardText: x1.5 Damage
   cardBackGround: {fileID: -3755851872276365507, guid: ee034cd63d248264c971be1f551832ad, type: 3}
   effectType: 1
-  effectValue: 4
+  effectValue: 1.5
   isUnique: 0
-  unlockWave: 5
+  unlockWave: 15

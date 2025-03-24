@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: DiamondAttackSpeedIncrease
   m_EditorClassIdentifier: 
   cardImage: {fileID: -469442031222528029, guid: 8ec495404c46d7346a948f83eb809549, type: 3}
-  cardText: x3 Attack Speed
+  cardText: x1.5  Attack Speed
   cardBackGround: {fileID: -3755851872276365507, guid: ee034cd63d248264c971be1f551832ad, type: 3}
   effectType: 2
-  effectValue: 3
+  effectValue: 1.5
   isUnique: 0
-  unlockWave: 5
+  unlockWave: 15
