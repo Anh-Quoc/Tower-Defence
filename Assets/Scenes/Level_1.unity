@@ -3059,7 +3059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3147,6 +3147,8 @@ MonoBehaviour:
   placementOffset: 0.1
   validPlacementColor: {r: 0, g: 1, b: 0, a: 0.14}
   invalidPlacementColor: {r: 1, g: 0, b: 0, a: 0.14}
+  MoneyText: {fileID: 169652431}
+  isActivated: 0
 --- !u!1 &347335898
 GameObject:
   m_ObjectHideFlags: 0
@@ -7368,6 +7370,8 @@ MonoBehaviour:
   placementOffset: 0.1
   validPlacementColor: {r: 0, g: 1, b: 0, a: 0.14}
   invalidPlacementColor: {r: 1, g: 0, b: 0, a: 0.14}
+  MoneyText: {fileID: 0}
+  isActivated: 0
 --- !u!114 &1406266667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7481,6 +7485,7 @@ GameObject:
   - component: {fileID: 1519693633}
   - component: {fileID: 1519693632}
   - component: {fileID: 1519693634}
+  - component: {fileID: 1519693635}
   m_Layer: 5
   m_Name: GunBar
   m_TagString: Untagged
@@ -7571,6 +7576,21 @@ MonoBehaviour:
   m_Spacing: {x: 20, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &1519693635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519693630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75c1690288024bf8b2ec8783246e0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoneyText: {fileID: 169652431}
+  StoreItems:
+  - {fileID: 299077391}
 --- !u!1 &1542767132
 GameObject:
   m_ObjectHideFlags: 0
@@ -8447,6 +8467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelGunInfo: {fileID: 627311507}
+  MoneyText: {fileID: 169652431}
 --- !u!1 &1903421412
 GameObject:
   m_ObjectHideFlags: 0
