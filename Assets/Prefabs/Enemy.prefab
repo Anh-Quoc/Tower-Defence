@@ -129,7 +129,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2935b91d8f69e4a8c49b3734debd6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  initialSpeed: 0.5
+  maxSpeed: 2.5
+  initialHP: 50
+  damage: 20
+  gold: 10
+  isDeathEffect: 0
 --- !u!50 &6804731574413620801
 Rigidbody2D:
   serializedVersion: 5
@@ -177,10 +182,10 @@ CircleCollider2D:
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: HealthIncrease
   m_EditorClassIdentifier: 
   cardImage: {fileID: -1468369581545096976, guid: acfcc35eb96fccb4fa5fdbb4d7dab529, type: 3}
-  cardText: +1 Health
+  cardText: +20 Health
   cardBackGround: {fileID: 8179995683505010490, guid: f4a00a8a7da570e438331fc18f3e2bdd, type: 3}
   effectType: 0
-  effectValue: 1
+  effectValue: 20
   isUnique: 0
   unlockWave: 0
